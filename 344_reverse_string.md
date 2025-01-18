@@ -1,7 +1,7 @@
-# ref: https://www.youtube.com/watch?v=86GHTcY0K4I&list=PLV5qT67glKSErHD66rKTfqerMYz9OaTOs&index=2
-# problem: https://leetcode.com/problems/reverse-string/description/
-# use 2 pointer to swap first and last
-# java
+#### ref: https://www.youtube.com/watch?v=86GHTcY0K4I&list=PLV5qT67glKSErHD66rKTfqerMYz9OaTOs&index=2
+#### problem: https://leetcode.com/problems/reverse-string/description/
+#### use 2 pointer to swap first and last
+#### java
 
 ```
 class Solution {
