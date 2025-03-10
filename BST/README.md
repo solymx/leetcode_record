@@ -23,3 +23,54 @@ example
  /   \        /     \
 10    60      20    100
 ```
+
+得到：
+```
+70 -> 50 -> 10 -> 60 -> 90 -> 20 -> 100
+```
+
+```
+  private preOrderTraverseNode(node: Node<T> | null) {
+    if (node) {
+      console.log(node.value);
+      this.preOrderTraverseNode(node.left)
+      this.preOrderTraverseNode(node.right)
+    }
+  }
+
+  preOrderTraverse() {
+    this.preOrderTraverseNode(this.root)
+  }
+```
+
+## inorder Traverse（中序遍歷）
+
+流程：先訪問left children node -> root node -> right children node
+example
+```
+        70
+    /        \
+  50           90
+ /   \        /     \
+10    60      20    100
+```
+
+得到：
+
+```
+10 -> 50 -> 60 -> 70 -> 20 -> 90 -> 100
+```
+
+```
+  private inOrderTraverseNode(node: Node<T> | null) {
+    if (node) {
+      this.inOrderTraverseNode(node.left)
+      console.log(node.value)
+      this.inOrderTraverseNode(node.right)
+    }
+  }
+
+  inOrderTraverse() {
+    this.inOrderTraverseNode(this.root)
+  }
+```
