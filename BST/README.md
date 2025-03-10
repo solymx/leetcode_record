@@ -16,7 +16,10 @@
 先訪問root node-> left children node -> right children node
 
 example
-
+```
         70
-  50             90
+    /        \
+  50           90
+ /   \        /     \
 10    60      20    100
+```
