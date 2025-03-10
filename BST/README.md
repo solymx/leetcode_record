@@ -45,6 +45,8 @@ example
 
 ## inorder Traverse（中序遍歷）
 
+特色：中序遍歷（in-order traversal）會得到一個遞增的數列
+
 流程：先訪問left children node -> root node -> right children node
 example
 ```
@@ -72,5 +74,37 @@ example
 
   inOrderTraverse() {
     this.inOrderTraverseNode(this.root)
+  }
+```
+
+## postorder Traverse（後序遍歷）
+
+遍歷流程：先訪問left children node -> right children node -> root node
+
+example
+```
+        70
+    /        \
+  50           90
+ /   \        /     \
+10    60      20    100
+```
+
+得到：
+```
+10 -> 60 -> 50 -> 20 -> 100 -> 90 -> 70
+```
+
+```
+  private postOrderTraverseNode(node: Node<T> | null) {
+    if (node) {
+      this.postOrderTraverseNode(node.left)
+      this.postOrderTraverseNode(node.right)
+      console.log(node.value)
+    }
+  }
+
+  postOrderTraverse() {
+    this.postOrderTraverseNode(this.root)
   }
 ```
